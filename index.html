@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSCaptchaSimple</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }body{
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }div{
+            margin: 20px 0;
+            padding: 10px;
+            width: 90%;
+            box-shadow: 0 0 4px 0 black;
+            box-sizing: border-box;
+            border-radius: 6px;
+        }#coherentWord{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }#selects{
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+        }select{
+            width: 120px;
+            background-color: white;
+            color: black;
+            padding: 2px 10px;
+            margin: 4px 0;
+            border: none;
+            border-left: 2px solid black;
+            border-radius: 2px;
+            box-shadow: 0 0 4px 0 black;
+        }#instrucciones{
+            width: 70%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h3>NOTHING TO SHOW: YET</h3>
+    </header>
+    <div>
+            <p>
+                Este código trata de hacer un recaptcha para 
+                medir la inteligencia del lado del cliente.
+            </p>
+    </div>
+    <div>
+        <h2>Selecciona una frase que sea coherente:</h2>
+    </div>
+    <div id="coherentWord">
+        <div id="selects">
+            <select name="word" id="word">
+                <option value="palabra">1</option>
+                <option value="palabra">2</option>
+                <option value="palabra">3</option>
+                <option value="palabra">4</option>
+                <option value="palabra">5</option>
+            </select>
+            <select name="word" id="word">
+                <option value="palabra">1</option>
+                <option value="palabra">2</option>
+                <option value="palabra">3</option>
+                <option value="palabra">4</option>
+                <option value="palabra">5</option>
+            </select>
+            <select name="word" id="word">
+                <option value="palabra">1</option>
+                <option value="palabra">2</option>
+                <option value="palabra">3</option>
+                <option value="palabra">4</option>
+                <option value="palabra">5</option>
+            </select>
+            <select name="word" id="word">
+                <option value="palabra">1</option>
+                <option value="palabra">2</option>
+                <option value="palabra">3</option>
+                <option value="palabra">4</option>
+                <option value="palabra">5</option>
+            </select>
+        </div>
+        <div id="instrucciones">
+            <p>
+                Lorem ipsum dolor sit amet consectetur 
+                adipisicing elit. Ipsa officia nemo ab, 
+                quos laboriosam natus esse, quaerat et 
+                dignissimos inventore nostrum rerum quidem 
+                qui dolorum voluptatibus minima commodi 
+                illo. Voluptatem?
+            </p>
+        </div>
+    </div>
+    <script>
+        const group = {
+            animal: perro,
+            animal: gato
+        }
+        const string = ['ABCDEFGHIJKLMNÑOPQRSTUVWXYZ'];
+        const numbers = [1,2,3,4,5,6,7,8,9,0];
+        function getWords(){
+
+        }
+    </script>
+</body>
+</html>
