@@ -20,21 +20,22 @@
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         }div{
             margin: 20px 0;
-            padding: 10px;
+            padding: 20px;
             width: 90%;
             box-shadow: 0 0 4px 0 black;
             box-sizing: border-box;
             border-radius: 6px;
-        }#coherentWord{
             display: flex;
+        }#coherentWord{
             flex-direction: row;
             justify-content: space-around;
         }#selects{
-            width: 30%;
-            display: flex;
+            width: fit-content;
             flex-direction: column;
             align-items: start;
             justify-content: center;
+            box-shadow: none;
+            
         }select{
             width: 120px;
             background-color: white;
@@ -46,7 +47,10 @@
             border-radius: 2px;
             box-shadow: 0 0 4px 0 black;
         }#instrucciones{
-            width: 70%;
+            justify-content: center;
+            align-items: center;
+            width: fit-content;
+            box-shadow: none;
         }
     </style>
 </head>
@@ -113,7 +117,6 @@
         const string = ['ABCDEFGHIJKLMNÑOPQRSTUVWXYZ'];
         const numbers = [1,2,3,4,5,6,7,8,9,0];
         function getWords(){
-
         }
     </script>
 </body>
