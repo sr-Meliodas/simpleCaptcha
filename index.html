@@ -1,123 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JSCaptchaSimple</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
     <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }body{
-            width: 100%;
-            height: auto;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        }div{
-            margin: 20px 0;
-            padding: 20px;
-            width: 90%;
-            box-shadow: 0 0 4px 0 black;
-            box-sizing: border-box;
-            border-radius: 6px;
-            display: flex;
-        }#coherentWord{
-            flex-direction: row;
-            justify-content: space-around;
-        }#selects{
-            width: fit-content;
-            flex-direction: column;
-            align-items: start;
-            justify-content: center;
-            box-shadow: none;
-            
-        }select{
-            width: 120px;
-            background-color: white;
-            color: black;
-            padding: 2px 10px;
-            margin: 4px 0;
-            border: none;
-            border-left: 2px solid black;
-            border-radius: 2px;
-            box-shadow: 0 0 4px 0 black;
-        }#instrucciones{
-            justify-content: center;
-            align-items: center;
-            width: fit-content;
-            box-shadow: none;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Quicksand', sans-serif;
+      }body {
+        background-color: #ffffff;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+      }
+      div {
+        margin: 20px 0;
+        padding: 20px;
+        width: 90%;
+        box-shadow: 0 0 4px 0 black;
+        box-sizing: border-box;
+        border-radius: 6px;
+        display: flex;
+      }
+      header {
+        box-sizing: border-box;
+        background-color: #222;
+        width: 100%;
+        min-width: 350px;
+        min-height: 60px;
+        max-height: 180px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      nav {
+        width: inherit;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        box-sizing: border-box;
+      }#contenedor_links{
+        box-shadow: none;
+        margin: initial;
+        padding: initial;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        transition: all .2s ease-in;
+      }#contenedor_links > a{
+        text-decoration: none;
+        color: white;
+
+      }#contenedor_links > a:hover{
+        text-decoration: underline;
+        color: white;
+        
+      }
+      #coherentWord {
+        flex-direction: row;
+        justify-content: space-around;
+      }
+      #selects {
+        width: fit-content;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        box-shadow: none;
+      }
+      select {
+        width: max-content;
+        background-color: #fff;
+        color: black;
+        padding: 2px 10px;
+        margin: 4px 0;
+        border: none;
+        border-left: 2px solid black;
+        border-radius: 2px;
+        box-shadow: 0 0 4px 0 black;
+      }
+      #instrucciones {
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+        box-shadow: none;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h3>NOTHING TO SHOW: YET</h3>
+      <nav>
+        <p>TORRES</p>
+        <div id="contenedor_links">
+          <a href="" class="linkNav"> Historia </a>
+          <a href="" class="linkNav"> Cooperativo </a>
+          <a href="" class="linkNav"> Versus </a>
+          <a href="" class="linkNav"> Online </a>
+          <a href="" class="linkNav"> Configuración </a>
+        </div>
+      </nav>
     </header>
     <div>
-            <p>
-                Este código trata de hacer un recaptcha para 
-                medir la inteligencia del lado del cliente.
-            </p>
+      <p>
+        Este código trata de hacer un recaptcha para medir la inteligencia del
+        lado del cliente.
+      </p>
     </div>
     <div>
-        <h2>Selecciona una frase que sea coherente:</h2>
+      <h2>Seleccione las palabras bien escritas:</h2>
     </div>
     <div id="coherentWord">
-        <div id="selects">
-            <select name="word" id="word">
-                <option value="palabra">1</option>
-                <option value="palabra">2</option>
-                <option value="palabra">3</option>
-                <option value="palabra">4</option>
-                <option value="palabra">5</option>
-            </select>
-            <select name="word" id="word">
-                <option value="palabra">1</option>
-                <option value="palabra">2</option>
-                <option value="palabra">3</option>
-                <option value="palabra">4</option>
-                <option value="palabra">5</option>
-            </select>
-            <select name="word" id="word">
-                <option value="palabra">1</option>
-                <option value="palabra">2</option>
-                <option value="palabra">3</option>
-                <option value="palabra">4</option>
-                <option value="palabra">5</option>
-            </select>
-            <select name="word" id="word">
-                <option value="palabra">1</option>
-                <option value="palabra">2</option>
-                <option value="palabra">3</option>
-                <option value="palabra">4</option>
-                <option value="palabra">5</option>
-            </select>
-        </div>
-        <div id="instrucciones">
-            <p>
-                Lorem ipsum dolor sit amet consectetur 
-                adipisicing elit. Ipsa officia nemo ab, 
-                quos laboriosam natus esse, quaerat et 
-                dignissimos inventore nostrum rerum quidem 
-                qui dolorum voluptatibus minima commodi 
-                illo. Voluptatem?
-            </p>
-        </div>
+      <div id="selects">
+        <select name="word" id="words0"></select>
+        <select name="word" id="words1"></select>
+        <select name="word" id="words2"></select>
+        <select name="word" id="words3"></select>
+      </div>
+      <div id="instrucciones">
+        <p>
+          Amo el canto del cenzontle, pájaro de 400 voces. Amo el color del jade
+          y el enervante perfume de las flores, pero más amo a mi hermano: el
+          hombre.
+        </p>
+      </div>
     </div>
     <script>
-        const group = {
-            animal: perro,
-            animal: gato
-        }
-        const string = ['ABCDEFGHIJKLMNÑOPQRSTUVWXYZ'];
-        const numbers = [1,2,3,4,5,6,7,8,9,0];
-        function getWords(){
-        }
+      const group0 = ["leon", "cabra", "perro", "tucan", "gato"];
+      const group1 = ["tigre", "cabra", "perro", "tucan", "gato"];
+      const group2 = ["camarones", "cabra", "perro", "tucan", "gato"];
+      const group3 = ["pasas", "cabra", "perro", "tucan", "gato"];
+      var select = document.getElementById("words0");
+      for (var i = 0; i <= group0.length - 1; i++) {
+        var option = document.createElement("option");
+        option.value = group0[i];
+        option.text = group0[i];
+        select.appendChild(option);
+      }
+      var select = document.getElementById("words1");
+      for (var i = 0; i <= group1.length - 1; i++) {
+        var option = document.createElement("option");
+        option.value = group1[i];
+        option.text = group1[i];
+        select.appendChild(option);
+      }
+      var select = document.getElementById("words2");
+      for (var i = 0; i <= group2.length - 1; i++) {
+        var option = document.createElement("option");
+        option.value = group2[i];
+        option.text = group2[i];
+        select.appendChild(option);
+      }
+      var select = document.getElementById("words3");
+      for (var i = 0; i <= group3.length - 1; i++) {
+        var option = document.createElement("option");
+        option.value = group3[i];
+        option.text = group3[i];
+        select.appendChild(option);
+      }
     </script>
-</body>
+  </body>
 </html>
